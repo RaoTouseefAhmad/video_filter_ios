@@ -13,6 +13,7 @@
 		1CBA06812CD8D483003DAE47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA067F2CD8D483003DAE47 /* Main.storyboard */; };
 		1CBA06832CD8D486003DAE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA06822CD8D486003DAE47 /* Assets.xcassets */; };
 		1CBA06862CD8D486003DAE47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA06842CD8D486003DAE47 /* LaunchScreen.storyboard */; };
+		7CE3CCE6107FD30D260C7A5E /* Pods_Videography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86C17BACE8F4A409ED64FDC /* Pods_Videography.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1CBA06822CD8D486003DAE47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CBA06852CD8D486003DAE47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CBA06872CD8D486003DAE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA991F74D7F2D7EF44B2B3B /* Pods-Videography.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videography.debug.xcconfig"; path = "Target Support Files/Pods-Videography/Pods-Videography.debug.xcconfig"; sourceTree = "<group>"; };
+		A86C17BACE8F4A409ED64FDC /* Pods_Videography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF42B4638F1C7DEE2FAFF3D9 /* Pods-Videography.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videography.release.xcconfig"; path = "Target Support Files/Pods-Videography/Pods-Videography.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE3CCE6107FD30D260C7A5E /* Pods_Videography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				1CBA06782CD8D483003DAE47 /* Videography */,
 				1CBA06772CD8D483003DAE47 /* Products */,
+				A2A2FB9F8324DD05DD132417 /* Pods */,
+				A5A37B03D640E30CD4502962 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Videography;
 			sourceTree = "<group>";
 		};
+		A2A2FB9F8324DD05DD132417 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FA991F74D7F2D7EF44B2B3B /* Pods-Videography.debug.xcconfig */,
+				CF42B4638F1C7DEE2FAFF3D9 /* Pods-Videography.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5A37B03D640E30CD4502962 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A86C17BACE8F4A409ED64FDC /* Pods_Videography.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CBA068A2CD8D486003DAE47 /* Build configuration list for PBXNativeTarget "Videography" */;
 			buildPhases = (
+				9DADDFA927EF6326EC603A31 /* [CP] Check Pods Manifest.lock */,
 				1CBA06722CD8D483003DAE47 /* Sources */,
 				1CBA06732CD8D483003DAE47 /* Frameworks */,
 				1CBA06742CD8D483003DAE47 /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DADDFA927EF6326EC603A31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Videography-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1CBA06722CD8D483003DAE47 /* Sources */ = {
@@ -287,12 +337,13 @@
 		};
 		1CBA068B2CD8D486003DAE47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA991F74D7F2D7EF44B2B3B /* Pods-Videography.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z77NN7HVR;
+				DEVELOPMENT_TEAM = 7TH56UTRPF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Videography/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,6 +351,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,12 +367,13 @@
 		};
 		1CBA068C2CD8D486003DAE47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF42B4638F1C7DEE2FAFF3D9 /* Pods-Videography.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z77NN7HVR;
+				DEVELOPMENT_TEAM = 7TH56UTRPF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Videography/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,6 +381,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
